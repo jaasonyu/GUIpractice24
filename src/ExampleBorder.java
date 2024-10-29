@@ -7,6 +7,7 @@ public class ExampleBorder implements ActionListener {
 
     private JFrame frame;
     private JPanel panel;
+    private JPanel panel1;
     private JTextArea ta;
     private JButton stopButton;
     private JButton goButton;
