@@ -6,6 +6,7 @@ public class Homework2 {
     //Step 1: declare variables
     private JFrame frame;
     private JPanel panel;
+    private JPanel panel1;
     private JButton button;
     private JLabel label;
     private JTextField textfield;
@@ -18,21 +19,23 @@ public class Homework2 {
 
     public Homework2(){
         //Step 2: construct variables
-        frame = new JFrame("Homework 1");
-        panel = new JPanel();
+        frame = new JFrame("Example with border layout");
+        panel = new JPanel(new BorderLayout());
+        panel1 = new JPanel(new BorderLayout());
         button = new JButton("Button 1");
         label = new JLabel("Label 1!");
-        textfield2 = new JTextField();
-        textfield = new JTextField();
+        textfield2 = new JTextField("this is a text area yay");
+        textfield = new JTextField("this is a text field!");
 
         //Step 3: organize the layout
 //        panel.add(button, BorderLayout.NORTH);
 //        panel.add(label, BorderLayout.CENTER);
 //        panel.add(label2, BorderLayout.SOUTH);
 
-        panel.add(label, BorderLayout.WEST);
+        panel1.add(label, BorderLayout.WEST);
+        panel1.add(textfield2, BorderLayout.CENTER);
+        panel.add(panel1, BorderLayout.CENTER);
         panel.add(button, BorderLayout.NORTH);
-        panel.add(textfield2, BorderLayout.EAST);
         panel.add(textfield, BorderLayout.SOUTH);
         frame.add(panel);
 
